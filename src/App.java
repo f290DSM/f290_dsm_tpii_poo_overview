@@ -1,13 +1,14 @@
-import domain.Contato;
+import domain.Professor;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
-        Contato contato1 = new Contato();
-        contato1.setNome("Pedro Villas");
-        contato1.setTelefone("1999999-9999");
-        contato1.setEmail("pedro@gmail.com");
-        contato1.setGithub("pedrof290");
-        System.out.println(contato1);
+        Professor usuario1 = new Professor(
+                "Pedro Villas",
+                "pedro@gmail.com",
+                "1999999-9999",
+                "pedrof290", 1000);
+
+                System.out.println(usuario1);
     }
 }

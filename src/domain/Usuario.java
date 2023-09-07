@@ -6,20 +6,31 @@ import java.util.Objects;
  * Uma classe é uma estrutura que define
  * atributos e comportamentos.
  */
-public class Contato {
+public class Usuario {
     // Atributos: nome, telefone, email, github
 
     /*
-    Java Beans
-    1. Variaveis e metodos utilizam lowerCamelCase: idUsuario
-    2. Classes, Interfaces utilizam HighterCamecase: UserId
-    3. Constantes: snake case com caixa alta: VALOR_DOLAR_ATUAL
-    4. Prefixos: get, set, add, remove, do
+     * Java Beans
+     * 1. Variaveis e metodos utilizam lowerCamelCase: idUsuario
+     * 2. Classes, Interfaces utilizam HighterCamecase: UserId
+     * 3. Constantes: snake case com caixa alta: VALOR_DOLAR_ATUAL
+     * 4. Prefixos: get, set, add, remove, do
      */
     private String nome;
     private String telefone;
     private String email;
     private String github;
+
+    public Usuario(String nome, String email,
+            String telefone, String gitHub) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.github = gitHub;
+
+        System.out.println("Acabei de criar um objeto do tipo " +
+                this.getClass().getSimpleName());
+    }
 
     // Comportamentos
     public void exibirDados() {
