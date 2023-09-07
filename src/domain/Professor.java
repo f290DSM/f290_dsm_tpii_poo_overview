@@ -1,6 +1,8 @@
 package domain;
 
-public class Professor extends Usuario {
+import java.util.List;
+
+public class Professor extends Usuario implements Avaliavel{
 
     private Integer matricula;
 
@@ -21,10 +23,17 @@ public class Professor extends Usuario {
 
     @Override
     public String toString() {
-        String retorno = super.toString();
-        return retorno
-                .concat("\nMatricula: ")
-                .concat(matricula.toString());
+        return String.format("%s\nMatrícula: %s", super.toString(), matricula);
     }
 
+    @Override
+    public void autenticar(String username, String senha) {
+        System.out.println("Professor autenticado com suesso!");
+    }
+
+    @Override
+    public void aplicarAvaliacao(List<Aluno> alunos) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aplicarAvaliacao'");
+    }
 }

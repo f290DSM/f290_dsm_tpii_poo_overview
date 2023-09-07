@@ -9,6 +9,8 @@ public class App {
                 "1999999-9999",
                 "pedrof290", 1000);
 
-                System.out.println(usuario1);
+        System.out.println(usuario1);
+
+        usuario1.autenticar("user", "password");
     }
 }
