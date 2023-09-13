@@ -1,4 +1,6 @@
+import domain.Avaliavel;
 import domain.Professor;
+import domain.Usuario;
 
 public class App {
 
@@ -12,5 +14,8 @@ public class App {
         System.out.println(usuario1);
 
         usuario1.autenticar("user", "password");
+
+        System.out.printf("Professor é Usuario: %b\n", usuario1 instanceof Usuario);
+        System.out.printf("Professor é Avaliavel: %b", usuario1 instanceof Avaliavel);
     }
 }
