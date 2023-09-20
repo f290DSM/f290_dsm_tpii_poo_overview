@@ -1,7 +1,4 @@
-import domain.Avaliavel;
-import domain.Curso;
-import domain.Professor;
-import domain.Usuario;
+import domain.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,10 +31,23 @@ public class App {
         //TODO: Criar toString() da classe Curso.
 
         Curso curso = new Curso(nomeCurso, conhecimentos);
+        Aluno a1 = new Aluno(
+                "João Pedro",
+                "joaopedro@gmail.com",
+                "1999999-8888",
+                "joaopedrof290", 1000
+        );
+        Aluno a2 = new Aluno(
+                "Enzo Gabriel",
+                "enzo@gmail.com",
+                "1999999-0000",
+                "enzof290", 1000
+        );
+        professor.setAlunos(Arrays.asList(a1,a2));
         professor.ensina(curso);
         //TODO: Escrever o objeto Curso
-        System.out.println(professor);
-
+        System.out.println(curso);
+        //TODO: Exibir os alunos e seus conhecimentos
         professor.getAlunos().forEach(System.out::println);
 
     }
