@@ -5,7 +5,8 @@ import java.util.List;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
+    private static void playground01() {
+        //TODO: Recortar o código da funcao main para cá...
         Professor professor = new Professor(
                 "Pedro Villas",
                 "pedro@gmail.com",
@@ -43,12 +44,35 @@ public class App {
                 "1999999-0000",
                 "enzof290", 1000
         );
-        professor.setAlunos(Arrays.asList(a1,a2));
+        professor.setAlunos(Arrays.asList(a1, a2));
         professor.ensina(curso);
         //TODO: Escrever o objeto Curso
         System.out.println(curso);
         //TODO: Exibir os alunos e seus conhecimentos
         professor.getAlunos().forEach(System.out::println);
+    }
 
+    private static void playground02() {
+        Departamento d1 = new Departamento();
+        d1.alocarProfessor(new Professor("Jose Pereira",
+                "jpereira@fatec.sp.gov.br",
+                "1999999-6666",
+                "JPereiraF290",
+                123456));
+        d1.alocarProfessor(new Professor("Antonio Silva",
+                "asilva@fatec.sp.gov.br",
+                "1999999-7777",
+                "ASilvaF290",
+                654321));
+
+        d1.listarProfessores();
+        Universidade f290 = new Universidade();
+        f290.adicionarDepartamento(d1);
+        f290.listarDepartamentos();
+        System.out.println(f290);
+    }
+
+    public static void main(String[] args) throws Exception {
+        playground02();
     }
 }

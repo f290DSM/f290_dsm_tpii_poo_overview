@@ -53,9 +53,8 @@ public class Professor extends Usuario implements Avaliavel {
 
     @Override
     public String toString() {
-        return "Professor{" +
-                "matricula=" + matricula +
-                ", alunos=" + alunos +
-                "} " + super.toString();
+        return super.toString() +
+                "\nMatricula:" + matricula +
+                "\nAlunos:" + alunos;
     }
 }

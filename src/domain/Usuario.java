@@ -80,7 +80,7 @@ public abstract class Usuario {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Nome: ").append(nome);
+        sb.append("\nNome: ").append(nome);
         sb.append("\nE-Mail: ").append(email);
         sb.append("\nTelefone: ").append(telefone);
         sb.append("\nGitHub: ").append(github);
